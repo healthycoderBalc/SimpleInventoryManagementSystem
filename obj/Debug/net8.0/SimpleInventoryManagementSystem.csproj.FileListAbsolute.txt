@@ -12,3 +12,4 @@ D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\r
 D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\SimpleInventoryManagementSystem.pdb
 D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\SimpleInventoryManagementSystem.genruntimeconfig.cache
 D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\ref\SimpleInventoryManagementSystem.dll
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\SimpleInventoryManagementSystem.sourcelink.json

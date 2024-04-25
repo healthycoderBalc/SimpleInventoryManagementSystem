@@ -10,8 +10,6 @@ namespace SimpleInventoryManagementSystem
     {
         private static List<Product> products = new List<Product>();
 
-        //internal List<Product>? Products { get ; set ; }
-
         public static void AddProduct()
         {
             string productName = Utilities.RequestProductName();
@@ -23,7 +21,22 @@ namespace SimpleInventoryManagementSystem
             Console.WriteLine($"Product: {p.Name} - ${p.Price} - Nº {p.Quantity}");
         }
 
-        
+        public static void ViewAllProducts()
+        {
+            Console.WriteLine("|--------------------------------------------|");
+            Console.WriteLine("|   Product    |    $Price    |   Quantity   |");
+            Console.WriteLine("|--------------------------------------------|");
+            for (int i = 0; i < products.Count; i++)
+            {
+                string name = Utilities.CompletingColumnSize(products[i].Name, 14);
+                string price = Utilities.CompletingColumnSize(products[i].Price.ToString(), 14); ;
+                string quantity = Utilities.CompletingColumnSize(products[i].Quantity.ToString(), 14);
+                Console.WriteLine($"|{name}|{price}|{quantity}|");
+            }
+            Console.WriteLine("|--------------------------------------------|");
+
+        }
+
 
     }
 }

@@ -33,10 +33,13 @@ namespace SimpleInventoryManagementSystem
                     Inventory.AddProduct();
                     Console.WriteLine();
                     Console.ReadLine();
-                    ShowMenu();
+                    //ShowMenu();
                     break;
                 case "2":
-                    // View all products
+                    Inventory.ViewAllProducts();
+                    Console.WriteLine();
+                    Console.ReadLine();
+                    //ShowMenu();
                     break;
                 case "3":
                     // Edit Product
@@ -85,6 +88,22 @@ namespace SimpleInventoryManagementSystem
                 }
             }
             return value;
+        }
+
+        internal static string CompletingColumnSize(string columnText, int columnSize)
+        {
+            int textLenght = columnText.Length;
+            int remainingSpace = columnSize - textLenght;
+            string spaceToAddAfter = string.Empty;
+            string spaceToAddBefore = string.Empty;
+            if (remainingSpace > 0)
+            {
+                int spaceAfter = remainingSpace % 2 == 0 ? remainingSpace / 2 : (remainingSpace/2 + 1);
+                spaceToAddAfter = new string(' ', (spaceAfter));
+                spaceToAddBefore = new string(' ', remainingSpace/2);
+            }
+            string textCompleted = spaceToAddBefore+columnText+spaceToAddAfter;
+            return textCompleted;
         }
 
     }
