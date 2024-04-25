@@ -56,7 +56,10 @@ namespace SimpleInventoryManagementSystem
                     Console.ReadLine();
                     break;
                 case "5":
-                    // Search Product
+                    Inventory.SearchProduct();
+                    Console.WriteLine();
+                    Console.Write("Press Enter to continue");
+                    Console.ReadLine();
                     break;
                 case "0":
                     // Exit

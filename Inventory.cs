@@ -43,10 +43,12 @@ namespace SimpleInventoryManagementSystem
             Console.WriteLine("** Editing a product **");
             Console.WriteLine("***********************");
             string productName = Utilities.RequestProductName();
+            bool found = false;
             for (int i = 0; i < products.Count; i++)
             {
                 if (products[i].Name == productName)
                 {
+                    found = true;
                     Console.WriteLine("Product found: ");
                     Console.WriteLine(products[i].ToString());
                     string selection;
@@ -60,7 +62,13 @@ namespace SimpleInventoryManagementSystem
                         Console.WriteLine();
 
                     } while (selection != "0");
+                    break;
                 }
+            }
+            if (!found)
+            {
+                Console.WriteLine("There is no product with such name");
+
             }
         }
 
@@ -95,7 +103,7 @@ namespace SimpleInventoryManagementSystem
         {
             Console.WriteLine("************************");
             Console.WriteLine("** Deleting a product **");
-            Console.WriteLine("***********************");
+            Console.WriteLine("************************");
             string productName = Utilities.RequestProductName();
             bool found = false;
             for (int i = 0; i < products.Count; i++)
@@ -131,6 +139,31 @@ namespace SimpleInventoryManagementSystem
 
             }
 
+        }
+
+        public static void SearchProduct()
+        {
+            Console.WriteLine("*****************************");
+            Console.WriteLine("** Searching for a product **");
+            Console.WriteLine("*****************************");
+            string productName = Utilities.RequestProductName();
+            bool found = false;
+
+            for (int i = 0; i < products.Count; i++)
+            {
+                if (products[i].Name == productName)
+                {
+                    found = true;
+
+                    Console.WriteLine("Product found: ");
+                    Console.WriteLine(products[i].ToString());
+                    break;
+                }
+            }
+            if (!found)
+            {
+                Console.WriteLine("There is no product with such name");
+            }
         }
     }
 
