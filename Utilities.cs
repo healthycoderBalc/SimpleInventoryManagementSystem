@@ -50,7 +50,10 @@ namespace SimpleInventoryManagementSystem
                     Console.ReadLine();
                     break;
                 case "4":
-                    // Delete Product
+                    Inventory.DeleteProduct();
+                    Console.WriteLine();
+                    Console.Write("Press Enter to continue");
+                    Console.ReadLine();
                     break;
                 case "5":
                     // Search Product
@@ -95,6 +98,17 @@ namespace SimpleInventoryManagementSystem
                 }
             }
             return value;
+        }
+
+        internal static string ConfirmDeletion()
+        {
+            string? remove = null;
+            while (remove == null)
+            {
+                Console.Write("Do you want to delete this product? (y/n) ");
+                remove = Console.ReadLine();
+            }
+            return remove;
         }
 
         internal static string CompletingColumnSize(string columnText, int columnSize)

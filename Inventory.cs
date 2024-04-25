@@ -91,6 +91,49 @@ namespace SimpleInventoryManagementSystem
         }
 
 
+        public static void DeleteProduct()
+        {
+            Console.WriteLine("************************");
+            Console.WriteLine("** Deleting a product **");
+            Console.WriteLine("***********************");
+            string productName = Utilities.RequestProductName();
+            bool found = false;
+            for (int i = 0; i < products.Count; i++)
+            {
+                if (products[i].Name == productName)
+                {
+                    found = true;
+                    Console.WriteLine("Product found: ");
+                    Console.WriteLine(products[i].ToString());
+                    string remove = Utilities.ConfirmDeletion();
+                    Console.WriteLine();
 
+                    if (remove == "y")
+                    {
+                        products.Remove(products[i]);
+                        Console.WriteLine("The product has been deleted successfully");
+                        Console.WriteLine("This is the updated list of products in the inventory: ");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Deletion cancelled");
+                        Console.WriteLine("The list of products in the inventory has not changed");
+                    }
+
+                    Console.WriteLine();
+                    ViewAllProducts();
+                    break;
+                }
+            }
+            if (!found)
+            {
+                Console.WriteLine("There is no product with such name");
+
+            }
+
+        }
     }
+
+
+
 }

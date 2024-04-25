@@ -221,6 +221,11 @@ project.lock.json
 # UWP Projects
 AppPackages/
 
+bin/Debug/*
+
+
+obj/Debug/*
+
 #####
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
