@@ -62,7 +62,10 @@ namespace SimpleInventoryManagementSystem
                     Console.ReadLine();
                     break;
                 case "0":
-                    // Exit
+                    Inventory.ExitApplication();
+                    Console.WriteLine();
+                    Console.Write("Press Enter to exit");
+                    Console.ReadLine();
                     break;
                 default:
                     Console.WriteLine("Yoy have not selected a valid option, please try again: ");

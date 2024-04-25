@@ -165,6 +165,13 @@ namespace SimpleInventoryManagementSystem
                 Console.WriteLine("There is no product with such name");
             }
         }
+
+        public static void ExitApplication()
+        {
+            Console.WriteLine("****************************");
+            Console.WriteLine("*  Thank you for you time  *");
+            Console.WriteLine("****************************");
+        }
     }
 
 
