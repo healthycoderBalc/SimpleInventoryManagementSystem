@@ -1,0 +1,14 @@
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\bin\Debug\net8.0\SimpleInventoryManagementSystem.exe
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\bin\Debug\net8.0\SimpleInventoryManagementSystem.deps.json
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\bin\Debug\net8.0\SimpleInventoryManagementSystem.runtimeconfig.json
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\bin\Debug\net8.0\SimpleInventoryManagementSystem.dll
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\bin\Debug\net8.0\SimpleInventoryManagementSystem.pdb
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\SimpleInventoryManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\SimpleInventoryManagementSystem.AssemblyInfoInputs.cache
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\SimpleInventoryManagementSystem.AssemblyInfo.cs
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\SimpleInventoryManagementSystem.csproj.CoreCompileInputs.cache
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\SimpleInventoryManagementSystem.dll
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\refint\SimpleInventoryManagementSystem.dll
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\SimpleInventoryManagementSystem.pdb
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\SimpleInventoryManagementSystem.genruntimeconfig.cache
+D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\obj\Debug\net8.0\ref\SimpleInventoryManagementSystem.dll
