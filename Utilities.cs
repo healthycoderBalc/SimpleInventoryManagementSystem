@@ -13,12 +13,14 @@ namespace SimpleInventoryManagementSystem
         {
             Console.WriteLine("*****************************");
             Console.WriteLine("***Please select an option***");
+            Console.WriteLine("*****************************");
             Console.WriteLine("* 1 - Add a product         *");
             Console.WriteLine("* 2 - View all products     *");
             Console.WriteLine("* 3 - Edit a product        *");
             Console.WriteLine("* 4 - Delete a product      *");
             Console.WriteLine("* 5 - Search for a product  *");
             Console.WriteLine("* 0 - Exit                  *");
+            Console.WriteLine("*****************************");
 
             Console.Write("Your selection is: ");
             string? selection = Console.ReadLine();
@@ -32,17 +34,20 @@ namespace SimpleInventoryManagementSystem
                 case "1":
                     Inventory.AddProduct();
                     Console.WriteLine();
+                    Console.Write("Press Enter to continue");
                     Console.ReadLine();
-                    //ShowMenu();
                     break;
                 case "2":
                     Inventory.ViewAllProducts();
                     Console.WriteLine();
+                    Console.Write("Press Enter to continue");
                     Console.ReadLine();
-                    //ShowMenu();
                     break;
                 case "3":
-                    // Edit Product
+                    Inventory.EditProduct();
+                    Console.WriteLine();
+                    Console.Write("Press Enter to continue");
+                    Console.ReadLine();
                     break;
                 case "4":
                     // Delete Product
@@ -58,6 +63,8 @@ namespace SimpleInventoryManagementSystem
                     break;
             }
         }
+
+
 
         internal static string RequestProductName()
         {
@@ -98,12 +105,27 @@ namespace SimpleInventoryManagementSystem
             string spaceToAddBefore = string.Empty;
             if (remainingSpace > 0)
             {
-                int spaceAfter = remainingSpace % 2 == 0 ? remainingSpace / 2 : (remainingSpace/2 + 1);
+                int spaceAfter = remainingSpace % 2 == 0 ? remainingSpace / 2 : (remainingSpace / 2 + 1);
                 spaceToAddAfter = new string(' ', (spaceAfter));
-                spaceToAddBefore = new string(' ', remainingSpace/2);
+                spaceToAddBefore = new string(' ', remainingSpace / 2);
             }
-            string textCompleted = spaceToAddBefore+columnText+spaceToAddAfter;
+            string textCompleted = spaceToAddBefore + columnText + spaceToAddAfter;
             return textCompleted;
+        }
+
+        internal static string ShowEditMenu()
+        {
+            Console.WriteLine("*****************************");
+            Console.WriteLine("***     Editing Product   ***");
+            Console.WriteLine("* 1 - Update Name           *");
+            Console.WriteLine("* 2 - Update Price          *");
+            Console.WriteLine("* 3 - Update Quantity       *");
+            Console.WriteLine("* 0 - Go To Main Menu       *");
+            Console.WriteLine("*****************************");
+
+            Console.Write("Your selection is: ");
+            string? selection = Console.ReadLine();
+            return selection != null ? selection : "0";
         }
 
     }

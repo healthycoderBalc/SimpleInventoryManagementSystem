@@ -23,6 +23,10 @@ namespace SimpleInventoryManagementSystem
             Quantity = quantity;
         }
 
+        public override string ToString()
+        {
+            return $"Product: {Name} - Price: ${Price} - Quantity: {Quantity}";
+        }
 
     }
 }

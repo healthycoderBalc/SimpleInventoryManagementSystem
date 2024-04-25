@@ -25,7 +25,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 272,
+          "DockedWidth": 273,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Inventory.cs",
               "ToolTip": "D:\\Foothill\\C#Course\\Exercise\\SimpleInventoryManagementSystem\\Inventory.cs",
               "RelativeToolTip": "Inventory.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAqwBoAAAA9AAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAmwDsAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-25T12:55:52.529Z",
               "EditorCaption": ""
@@ -49,10 +49,17 @@
               "RelativeDocumentMoniker": "Product.cs",
               "ToolTip": "D:\\Foothill\\C#Course\\Exercise\\SimpleInventoryManagementSystem\\Product.cs",
               "RelativeToolTip": "Product.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAqwBEAAABMAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAqwBcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T12:55:38.245Z"
-            },
+              "WhenOpened": "2024-04-25T12:55:38.245Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 219,
+          "SelectedChildIndex": 1,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -61,17 +68,11 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Foothill\\C#Course\\Exercise\\SimpleInventoryManagementSystem\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-25T12:55:21.535Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 220,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -80,7 +81,7 @@
               "RelativeDocumentMoniker": "Utilities.cs",
               "ToolTip": "D:\\Foothill\\C#Course\\Exercise\\SimpleInventoryManagementSystem\\Utilities.cs",
               "RelativeToolTip": "Utilities.cs",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAswGEAAAAzAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAuwCkAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-25T12:56:09.342Z",
               "EditorCaption": ""

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SimpleInventoryManagementSystem
-build_property.ProjectDir = D:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\
+build_property.ProjectDir = d:\Foothill\C#Course\Exercise\SimpleInventoryManagementSystem\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
