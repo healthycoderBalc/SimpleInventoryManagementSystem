@@ -8,7 +8,6 @@ namespace SimpleInventoryManagementSystem
 {
     internal class Utilities
     {
-
         internal static string ShowMenu()
         {
             Console.WriteLine("*****************************");
@@ -44,19 +43,19 @@ namespace SimpleInventoryManagementSystem
                     Console.ReadLine();
                     break;
                 case "3":
-                    Inventory.EditProduct();
+                    Inventory.ManageProduct("Editing a product", selection);
                     Console.WriteLine();
                     Console.Write("Press Enter to continue");
                     Console.ReadLine();
                     break;
                 case "4":
-                    Inventory.DeleteProduct();
+                    Inventory.ManageProduct("Deleting a product", selection);
                     Console.WriteLine();
                     Console.Write("Press Enter to continue");
                     Console.ReadLine();
                     break;
                 case "5":
-                    Inventory.SearchProduct();
+                    Inventory.ManageProduct("Searching for a product", selection);
                     Console.WriteLine();
                     Console.Write("Press Enter to continue");
                     Console.ReadLine();
@@ -72,8 +71,6 @@ namespace SimpleInventoryManagementSystem
                     break;
             }
         }
-
-
 
         internal static string RequestProductName()
         {

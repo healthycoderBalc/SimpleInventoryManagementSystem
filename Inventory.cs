@@ -36,12 +36,12 @@ namespace SimpleInventoryManagementSystem
             Console.WriteLine("|--------------------------------------------|");
         }
 
-
-        public static void EditProduct()
+        public static void ManageProduct(string text, string selection)
         {
-            Console.WriteLine("***********************");
-            Console.WriteLine("** Editing a product **");
-            Console.WriteLine("***********************");
+            string textCentered = Utilities.CompletingColumnSize(text, 30);
+            Console.WriteLine("********************************");
+            Console.WriteLine($"*{textCentered}*");
+            Console.WriteLine("********************************");
             string productName = Utilities.RequestProductName();
             bool found = false;
             for (int i = 0; i < products.Count; i++)
@@ -51,25 +51,39 @@ namespace SimpleInventoryManagementSystem
                     found = true;
                     Console.WriteLine("Product found: ");
                     Console.WriteLine(products[i].ToString());
-                    string selection;
-                    do
+                    switch (selection)
                     {
-                        selection = Utilities.ShowEditMenu();
-                        EditProductAttribute(products[i], selection);
-                        Console.WriteLine();
-                        Console.WriteLine($"This is the product you updated: ");
-                        Console.WriteLine(products[i].ToString());
-                        Console.WriteLine();
-
-                    } while (selection != "0");
+                        case "3":
+                            EditProduct(products[i]);
+                            break;
+                        case "4":
+                            DeleteProduct(products[i]);
+                            break;
+                        case "5":
+                            break;
+                    }
                     break;
                 }
             }
             if (!found)
             {
                 Console.WriteLine("There is no product with such name");
-
             }
+        }
+
+        private static void EditProduct(Product p)
+        {
+            string selection;
+            do
+            {
+                selection = Utilities.ShowEditMenu();
+                EditProductAttribute(p, selection);
+                Console.WriteLine();
+                Console.WriteLine($"This is the product you updated: ");
+                Console.WriteLine(p.ToString());
+                Console.WriteLine();
+
+            } while (selection != "0");
         }
 
         private static void EditProductAttribute(Product p, string selection)
@@ -98,72 +112,26 @@ namespace SimpleInventoryManagementSystem
 
         }
 
-
-        public static void DeleteProduct()
+        private static void DeleteProduct(Product p)
         {
-            Console.WriteLine("************************");
-            Console.WriteLine("** Deleting a product **");
-            Console.WriteLine("************************");
-            string productName = Utilities.RequestProductName();
-            bool found = false;
-            for (int i = 0; i < products.Count; i++)
+
+            string remove = Utilities.ConfirmDeletion();
+            Console.WriteLine();
+
+            if (remove == "y")
             {
-                if (products[i].Name == productName)
-                {
-                    found = true;
-                    Console.WriteLine("Product found: ");
-                    Console.WriteLine(products[i].ToString());
-                    string remove = Utilities.ConfirmDeletion();
-                    Console.WriteLine();
-
-                    if (remove == "y")
-                    {
-                        products.Remove(products[i]);
-                        Console.WriteLine("The product has been deleted successfully");
-                        Console.WriteLine("This is the updated list of products in the inventory: ");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Deletion cancelled");
-                        Console.WriteLine("The list of products in the inventory has not changed");
-                    }
-
-                    Console.WriteLine();
-                    ViewAllProducts();
-                    break;
-                }
+                products.Remove(p);
+                Console.WriteLine("The product has been deleted successfully");
+                Console.WriteLine("This is the updated list of products in the inventory: ");
             }
-            if (!found)
+            else
             {
-                Console.WriteLine("There is no product with such name");
-
+                Console.WriteLine("Deletion cancelled");
+                Console.WriteLine("The list of products in the inventory has not changed");
             }
 
-        }
-
-        public static void SearchProduct()
-        {
-            Console.WriteLine("*****************************");
-            Console.WriteLine("** Searching for a product **");
-            Console.WriteLine("*****************************");
-            string productName = Utilities.RequestProductName();
-            bool found = false;
-
-            for (int i = 0; i < products.Count; i++)
-            {
-                if (products[i].Name == productName)
-                {
-                    found = true;
-
-                    Console.WriteLine("Product found: ");
-                    Console.WriteLine(products[i].ToString());
-                    break;
-                }
-            }
-            if (!found)
-            {
-                Console.WriteLine("There is no product with such name");
-            }
+            Console.WriteLine();
+            ViewAllProducts();
         }
 
         public static void ExitApplication()
@@ -173,7 +141,4 @@ namespace SimpleInventoryManagementSystem
             Console.WriteLine("****************************");
         }
     }
-
-
-
 }
