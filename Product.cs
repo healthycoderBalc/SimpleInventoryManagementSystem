@@ -8,11 +8,12 @@ namespace SimpleInventoryManagementSystem
 {
     internal class Product
     {
+        private int productID;
         private string name = string.Empty;
         private double price;
         private double quantity;
 
-
+        public int ProductId { get => productID; set => productID = value; }
         public string Name { get => name; set => name = value; }
         public double Price { get => price; set => price = value; }
         public double Quantity { get => quantity; set => quantity = value; }
@@ -25,7 +26,7 @@ namespace SimpleInventoryManagementSystem
 
         public override string ToString()
         {
-            return $"Product: {Name} - Price: ${Price} - Quantity: {Quantity}";
+            return $"{ProductId}. Product: {Name} - Price: ${Price} - Quantity: {Quantity}";
         }
 
     }
